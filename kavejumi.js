@@ -9,7 +9,7 @@ function kavetasDienas(termins, atdots) {
 function maksaCenti(dienas, students = false) {
   let maksa = dienas * DIENAS_MAKSA_CENTI;
   if (students) {
-    maksa = Math.round(maksa / 2);
+    maksa = Math.floor(maksa / 2);
   }
   return Math.min(maksa, MAX_MAKSA_CENTI);
 }
