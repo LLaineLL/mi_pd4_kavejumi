@@ -15,7 +15,7 @@ function maksaCenti(dienas, students = false) {
 }
 
 function nedelasDiena(diena, pirmaDiena = 3) {
-  return (pirmaDiena + diena - 1) % 7;
+  return (((pirmaDiena + diena - 1) % 7) + 7) % 7;
 }
 
 function topKavetaji(maksas) {
