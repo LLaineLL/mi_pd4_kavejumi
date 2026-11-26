@@ -19,7 +19,7 @@ function nedelasDiena(diena, pirmaDiena = 3) {
 }
 
 function topKavetaji(maksas) {
-  return [...maksas].sort().reverse().slice(0, 3);
+  return [...maksas].sort((a, b) => b - a).slice(0, 3);
 }
 
 function formatetEur(centi) {
