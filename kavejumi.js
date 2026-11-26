@@ -29,10 +29,13 @@ function formatetEur(centi) {
 }
 
 function kopsavilkums(maksas) {
-  if (!maksas) {
+  if (!maksas || maksas.length === 0) {
     return "Nav kavējumu";
   }
   const kopa = maksas.reduce((a, b) => a + b, 0);
+  if (kopa === 0) {
+    return "Nav kavējumu";
+  }
   return `${maksas.length} kavējumi, kopā ${formatetEur(kopa)}`;
 }
 
