@@ -1,0 +1,11 @@
+# ZIP arhīvs
+mi-pd4-kavejumi.zip
+
+# Word dokumenti
+*.docx
+
+# LibreOffice/Word bloķēšanas faili (piem., .~lock.*.docx#)
+.~lock.*#
+
+
+AGENTS.md
