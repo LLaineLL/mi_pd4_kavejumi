@@ -23,6 +23,8 @@ const testi = [
   ["U3 kavetasDarbaDienas(143, 145) svētki svētdienā tikai vienreiz", () => k.kavetasDarbaDienas(143, 145, 3, k.SVETKI_2026), 1],
   ["U3 kavetasDarbaDienas(1, 3) pārceltā brīvdiena 2. janv.", () => k.kavetasDarbaDienas(1, 3, 3, k.SVETKI_2026), 1],
   ["U3 kavetasDarbaDienas(20, 23, 3, [22, 22]) dublikāts", () => k.kavetasDarbaDienas(20, 23, 3, [22, 22]), 2],
+  ["U4 maksaCenti(80, true) studentu griesti 300", () => k.maksaCenti(80, true), 300],
+  ["U4 maksaCenti(80) parastie griesti 500", () => k.maksaCenti(80), 500],
 ];
 let ok = 0;
 for (const [nos, f, gaid] of testi) {

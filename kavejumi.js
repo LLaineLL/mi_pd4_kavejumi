@@ -1,6 +1,7 @@
 // Bibliotēkas kavējumu maksa. Autors: iepriekšējais izstrādātājs.
 const DIENAS_MAKSA_CENTI = 15;
 const MAX_MAKSA_CENTI = 500;
+const MAX_STUDENTU_CENTI = 300;
 
 // 2026. gada svētku dienas (likums „Par svētku, atceres un atzīmējamām dienām”)
 // un pārceltās brīvdienas; dienu numuri pēc N4 (1 = 1. janvāris).
@@ -32,6 +33,7 @@ function maksaCenti(dienas, students = false) {
   let maksa = dienas * DIENAS_MAKSA_CENTI;
   if (students) {
     maksa = Math.floor(maksa / 2);
+    return Math.min(maksa, MAX_STUDENTU_CENTI);
   }
   return Math.min(maksa, MAX_MAKSA_CENTI);
 }
