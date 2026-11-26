@@ -16,6 +16,13 @@ const testi = [
   ["kopsavilkums([])", () => k.kopsavilkums([]), "Nav kavējumu"],
   ["kopsavilkums([45, 120])", () => k.kopsavilkums([45, 120]), "2 kavējumi, kopā 1,65 €"],
   ["formatetEur(-150)", () => k.formatetEur(-150), "-1,50 €"],
+  ["U3 kavetasDarbaDienas(10, 13) svētdiena 11. janv. neskaitās", () => k.kavetasDarbaDienas(10, 13, 3, k.SVETKI_2026), 2],
+  ["U3 kavetasDarbaDienas(10, 8) atdots laikā", () => k.kavetasDarbaDienas(10, 8, 3, k.SVETKI_2026), 0],
+  ["U3 kavetasDarbaDienas(16, 17) sestdiena skaitās", () => k.kavetasDarbaDienas(16, 17, 3, k.SVETKI_2026), 1],
+  ["U3 kavetasDarbaDienas(120, 122) svētki 1. maijā", () => k.kavetasDarbaDienas(120, 122, 3, k.SVETKI_2026), 1],
+  ["U3 kavetasDarbaDienas(143, 145) svētki svētdienā tikai vienreiz", () => k.kavetasDarbaDienas(143, 145, 3, k.SVETKI_2026), 1],
+  ["U3 kavetasDarbaDienas(1, 3) pārceltā brīvdiena 2. janv.", () => k.kavetasDarbaDienas(1, 3, 3, k.SVETKI_2026), 1],
+  ["U3 kavetasDarbaDienas(20, 23, 3, [22, 22]) dublikāts", () => k.kavetasDarbaDienas(20, 23, 3, [22, 22]), 2],
 ];
 let ok = 0;
 for (const [nos, f, gaid] of testi) {
