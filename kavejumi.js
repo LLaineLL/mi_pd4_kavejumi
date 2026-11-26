@@ -23,9 +23,11 @@ function topKavetaji(maksas) {
 }
 
 function formatetEur(centi) {
-  const eiro = Math.floor(centi / 100);
-  const c = String(centi % 100).padStart(2, "0");
-  return `${eiro},${c} €`;
+  const zime = centi < 0 ? "-" : "";
+  const absCenti = Math.abs(centi);
+  const eiro = Math.floor(absCenti / 100);
+  const c = String(absCenti % 100).padStart(2, "0");
+  return `${zime}${eiro},${c} €`;
 }
 
 function kopsavilkums(maksas) {

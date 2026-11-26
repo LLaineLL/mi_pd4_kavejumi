@@ -15,6 +15,7 @@ const testi = [
   ["formatetEur(5)", () => k.formatetEur(5), "0,05 €"],
   ["kopsavilkums([])", () => k.kopsavilkums([]), "Nav kavējumu"],
   ["kopsavilkums([45, 120])", () => k.kopsavilkums([45, 120]), "2 kavējumi, kopā 1,65 €"],
+  ["formatetEur(-150)", () => k.formatetEur(-150), "-1,50 €"],
 ];
 let ok = 0;
 for (const [nos, f, gaid] of testi) {
